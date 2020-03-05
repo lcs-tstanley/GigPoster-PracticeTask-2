@@ -37,15 +37,42 @@ canvas.fillColor = yellow
 
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-//build first  parallelogram
+//build first parallelogram
 
+canvas.fillColor = purple
+
+canvas.drawShapesWithBorders = false
+
+canvas.drawShapesWithFill = true
+
+for horizontalPosition in stride(from: -140, through: 25 + 3 * 160, by: 160) {
+    var corner : [Point] = []
+    corner.append(Point(x: horizontalPosition, y: 50))
+    corner.append(Point(x: horizontalPosition + 50, y: 150))
+    corner.append(Point(x: horizontalPosition + 200, y: 150))
+    corner.append(Point(x: horizontalPosition + 150, y: 50))
+    canvas.drawCustomShape(with: corner)
+}
+
+for horizontalPosition in stride(from: -125, through: 25 + 3 * 160, by: 160) {
 var corner : [Point] = []
-corner.append(Point(x: 25, y: 50))
-corner.append(Point(x: 75, y: 150))
-corner.append(Point(x: 225, y: 150))
-corner.append(Point(x: 175, y: 50))
-
+corner.append(Point(x: horizontalPosition, y: 225))
+corner.append(Point(x: horizontalPosition + 50, y: 325))
+corner.append(Point(x: horizontalPosition + 200, y: 325))
+corner.append(Point(x: horizontalPosition + 150, y: 225))
 canvas.drawCustomShape(with: corner)
+}
+
+canvas.fillColor = lightRed
+
+for horizontalPosition in stride(from: -125, through: 25 + 3 * 160, by: 160) {
+var corner : [Point] = []
+corner.append(Point(x: horizontalPosition, y: 140))
+corner.append(Point(x: horizontalPosition + 50, y: 240))
+corner.append(Point(x: horizontalPosition + 200, y: 240))
+corner.append(Point(x: horizontalPosition + 150, y: 140))
+canvas.drawCustomShape(with: corner)
+}
 /*:
  ## Use Source Control
  
