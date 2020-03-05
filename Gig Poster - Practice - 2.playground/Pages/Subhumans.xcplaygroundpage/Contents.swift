@@ -33,8 +33,19 @@ let brown = Color(hue: 38, saturation: 99, brightness: 38, alpha: 100)
 let lightRed = Color(hue: 10, saturation: 80, brightness: 80, alpha: 75)
 
 // Begin your solution here...
+canvas.fillColor = yellow
 
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+//build first  parallelogram
+
+var corner : [Point] = []
+corner.append(Point(x: 25, y: 50))
+corner.append(Point(x: 75, y: 150))
+corner.append(Point(x: 225, y: 150))
+corner.append(Point(x: 175, y: 50))
+
+canvas.drawCustomShape(with: corner)
 /*:
  ## Use Source Control
  
